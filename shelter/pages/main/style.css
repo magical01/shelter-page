@@ -180,6 +180,38 @@ img {
 .hero__image {
   margin-left: 60px;
 }
+/* * ABOUT */ */
+.about__image {
+  display: inline-block;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  margin-left: 175px;
+}
+.about__content {
+  display: inline-block;
+  margin-left: 120px;
+  max-width: 430px;
+}
+.about__title {
+  margin-bottom: 25px;
+  max-width: 90%;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.about__descr {
+  font-family: "Arial";
+  font-size: 15px;
+  line-height: 24px;
+  color: #4C4C4C;
+}
+.about__descr:not(:last-child) {
+  margin-bottom: 25px;
+  
+}
+
 
 
 
