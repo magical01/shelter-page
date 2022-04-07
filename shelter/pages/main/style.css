@@ -107,7 +107,7 @@ img {
 .logo__link {
   color: #F1CDB3;
 }
-.logo__descr {
+.logo__subtitle {
   margin-top: 10px;
   font-family: 'Arial';
   font-size: 13px;
@@ -130,7 +130,10 @@ img {
   transition: 0.2s ease-in-out;
 }
 .nav__link:hover {
-  border-bottom: 1px solid #F1CDB3;
+  color: #FAFAFA;
+}
+.nav__link:active {
+  border-bottom: 3px solid #F1CDB3;
   color: #FAFAFA;
 }
 /* hero */
@@ -170,6 +173,10 @@ img {
   padding: 15px 45px;
   border-radius: 100px;
   background: #F1CDB3;
+  transition: 0.2s ease-in-out;
+}
+.hero__btn:hover {
+  background: #FDDCC4;
 }
 .hero__link {
   font-size: 17px;
@@ -239,13 +246,25 @@ img {
 .friends__item {
   margin-bottom: 60px;
   border-radius: 9px;
-  background-color: #FAFAFA;;
+  background-color: #FAFAFA;
+  transition: 0.2s ease-in-out;
 }
+.friends__item:hover {
+  background-color: #FFFFFF;
+  
+}
+
+
 .friends__card-name {
   display: block;
   margin-top: 30px;
   margin-bottom: 45px;
   text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 .friends__card-btn {
   display: block;
@@ -258,6 +277,10 @@ img {
   text-align: center;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
+  transition: 0.2s ease-in-out;
+}
+.friends__card-btn:hover {
+  background-color: #F1CDB3;
 }
 .friends__card-btn__link {
   color: #292929;
@@ -273,6 +296,10 @@ img {
   background: #F1CDB3;
   border-radius: 100px;
   color: #292929;
+  transition: 0.2s ease-in-out;
+}
+.friends__btn-rest:hover {
+  background: #FDDCC4;
 }
 /* HOw */
 .help {
