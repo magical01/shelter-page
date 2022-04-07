@@ -275,6 +275,9 @@ img {
   color: #292929;
 }
 /* HOw */
+.help {
+  background-color: #FFFFFF;
+}
 .help__container {
   padding-top: 80px;
   padding-bottom: 100px;
@@ -291,9 +294,12 @@ img {
   letter-spacing: 0.06em;
   color: #545454;
 }
+.help__wrap-list {
+  padding: 0 87px;
+}
 .help__list-first {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 60px;
   margin-bottom: 55px;
 }
@@ -320,5 +326,71 @@ img {
   display: flex;
   justify-content: space-evenly;
 } 
-
+/* donation */
+.donation {
+  background-color: #F6F6F6;
+}
+.donation__container {
+  display: flex;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+.donation__image {
+  margin-left: 142px;
+  max-width: 505px;
+  flex:  0 1 65%;
+}
+.donation__image img {
+  object-fit: contain;
+}
+.donation__content {
+  flex: 0 1 35%;
+  margin-right: 142px;
+  margin-left: 30px;
+}
+.donation__title {
+  max-width: 300px;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.donation__subtitle {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.donation__wrap-bank {
+  display: flex;
+  max-width: 350px;
+  padding: 10px 15px;
+  background: #F1CDB3;
+  border-radius: 9px;
+}
+.donation__bank__icon {
+  display: inline-block;
+  background-image: url('../../assets/icons/credit-card.svg');
+  width: 30px;
+  height: 23px;
+}
+.donation__bank {
+  margin-left: 15px;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.donation__descr {
+  margin-top: 20px;
+  font-family: 'Arial';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #B2B2B2;
+}
 
