@@ -393,4 +393,106 @@ img {
   line-height: 18px;
   color: #B2B2B2;
 }
+/* footer */ 
+.footer {
+  background-image: url('../../assets/images/footer-gradient-background.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.footer__container {
+  position: relative;
+  /* padding-top: 56px; */
+}
+.footer__contacts {
+  display: inline-block;
+  margin-right: 161px;
+}
+.footer__location {
+  display: inline-block;
+}
+.footer__contacts__title {
+  margin-top: 56px;
+  max-width: 285px;
+}
+.footer__title {
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+.footer__contacts__wrap-mail {
+  display: flex;
+  align-items: center;
+  margin-top: 43px;
+  margin-bottom: 43px;
+}
+.footer__contacts__wrap-phone {
+  display: flex;
+  align-items: center;
+  margin-bottom: 64px;
+}
+.foooter__contacts__icon-mail {
+  display: inline-block;
+  margin-right: 20px;
+  width: 40px;
+  height: 26px;
+  background-image: url('../../assets/icons/icon-email.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.foooter__contacts__icon-phone {
+  display: inline-block;
+  margin-right: 20px;
+  width: 40px;
+  height: 32px;
+  background-image: url('../../assets/icons/icon-phone.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.footer__contacts__link {
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: #F1CDB3;
+}
+.footer__location__title {
+  max-width: 270px;
+}
+.footer__location__locate {
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: #F1CDB3;
+}
+.footer__location__wrap-first {
+  display: flex;
+  align-items: center;
+  margin-top: 28px;
+  margin-bottom: 37px;
+}
+.footer__location__wrap-second {
+  display: flex;
+  align-items: center;
+}
+.footer__location__icon-locate {
+  display: inline-block;
+  margin-right: 20px;
+  width: 22px;
+  height: 32px;
+  background-image: url('../../assets/icons/icon-marker.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.footer__location__locate {
+  max-width: 260px;
+}
+.footer__puppy-img {
+  position: absolute;
+  top: 44px;
+  right: 40px;
+  height: auto;
+  object-fit: contain;
+}
 
