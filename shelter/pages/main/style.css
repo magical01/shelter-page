@@ -213,10 +213,10 @@ img {
 }
 /* friends */
 .friends {
-  padding-top: 60px;
   background: #F6F6F6;
 }
 .friends__container {
+  padding-top: 60px;
   padding-bottom: 100px;
 }
 .friends__wrap-title {
@@ -274,5 +274,51 @@ img {
   border-radius: 100px;
   color: #292929;
 }
+/* HOw */
+.help__container {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+.help__wrap-title {
+  text-align: center;
+}
+.help__title {
+  display: inline-block;
+  max-width: 30%;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.help__list-first {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+  margin-bottom: 55px;
+}
+.help__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.help__item img {
+  display: block;
+  text-align: center;
+}
+.help__item-title {
+  display: block;
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
+.help__list-second {
+  display: flex;
+  justify-content: space-evenly;
+} 
 
 
