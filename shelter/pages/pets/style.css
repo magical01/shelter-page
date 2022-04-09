@@ -110,6 +110,7 @@ img {
   color: #545454;
 }
 .logo__subtitle {
+  display: block;
   margin-top: 10px;
   font-family: 'Arial';
   font-size: 13px;
@@ -130,6 +131,9 @@ img {
   line-height: 24px;
   color: #545454;
   transition: 0.1s ease-in-out;
+}
+.nav__link-active {
+  border-bottom: 3px solid #F1CDB3;
 }
 .nav__link:hover {
   color: #292929
