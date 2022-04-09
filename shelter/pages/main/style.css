@@ -237,7 +237,6 @@ img {
   height: 52px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
-  transform: rotate(-180deg);
   transition: 0.2s ease-in-out;
 }
 .friends__pagination:hover {
@@ -254,7 +253,7 @@ img {
   display: inline-block;
   width: 14px;
   height: 8px;
-  background-image: url('../../assets/icons/arrow-left.svg');
+  background-image: url('../../assets/icons/arrow-right.svg');
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -262,7 +261,7 @@ img {
   display: inline-block;
   width: 14px;
   height: 8px;
-  background-image: url('../../assets/icons/arrow-right.svg'); 
+  background-image: url('../../assets/icons/arrow-left.svg'); 
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -319,7 +318,7 @@ img {
   border-radius: 100px;
   transition: 0.2s ease-in-out;
 }
-.friends__card-btn:hover {
+.friends__item:hover .friends__card-btn {
   background-color: #F1CDB3;
 }
 .friends__card-btn__link {
@@ -474,7 +473,6 @@ img {
 }
 .footer__container {
   position: relative;
-  /* padding-top: 56px; */
 }
 .footer__contacts {
   display: inline-block;
@@ -524,6 +522,8 @@ img {
   background-repeat: no-repeat;
 }
 .footer__contacts__link {
+  display: flex;
+  align-items: center;
   font-size: 20px;
   line-height: 23px;
   letter-spacing: 0.06em;
@@ -533,6 +533,10 @@ img {
   max-width: 270px;
 }
 .footer__location__locate {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 320px;
   font-size: 20px;
   line-height: 23px;
   letter-spacing: 0.06em;
@@ -555,10 +559,8 @@ img {
   height: 32px;
   background-image: url('../../assets/icons/icon-marker.svg');
   background-position: center;
+  background-size: contain;
   background-repeat: no-repeat;
-}
-.footer__location__locate {
-  max-width: 260px;
 }
 .footer__puppy-img {
   position: absolute;
