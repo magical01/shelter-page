@@ -591,4 +591,42 @@ img {
   height: auto;
   object-fit: contain;
 }
+@media (max-width: 1104px) {
+  .about__content {
+    margin-left: 20px;
+  }
+}
 
+@media (max-width: 1060px) {
+  .hero {
+    max-height: fit-content;
+  }
+  .hero__container {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+  }
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+  }
+  .hero__wrapper-btn {
+    text-align: center;
+  }
+  .hero__btn {
+    max-width: fit-content;
+  }
+  .hero__image {
+    margin-top: 100px;
+    margin-left: 0px;
+  }
+  .about__image {
+    margin-left: 0px;
+  }
+  .about__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
