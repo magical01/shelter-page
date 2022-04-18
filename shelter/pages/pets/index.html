@@ -12,6 +12,8 @@
   <link rel="preload" href="../../assets/fonts/ArialMT.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+
 </head>
 <body class="page__body">
   <header class="header">
@@ -23,7 +25,7 @@
         </a></h1>
         
       </div>
-      <nav class="nav">
+      <nav class="nav" title="Главное меню" data-menu>
         <ul class="nav__list list-reset ">
           <li class="nav__item">
             <a href="../main/index.html" class="nav__link">About the shelter</a>
@@ -38,7 +40,13 @@
             <a href="#footer" class="nav__link">Contacts</a>
           </li>
         </ul>
+        
       </nav>
+      <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger >
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
     </div>
   </header>
 
@@ -47,8 +55,9 @@
       <div class="container friends__container">
         <div class="friends__wrap-title">
           <h3 class="friends__title">
-            &nbsp;&nbsp; &nbsp; Our friends who &nbsp; &nbsp; are looking for a house
+            Our friends who 
           </h3>
+          <h3 class="friends__title-second">are looking for a house</h3>
         </div>
         <ul class="friends__list list-reset">
             <li class="friends__item">
@@ -84,7 +93,7 @@
                   </a>
                 </button>
             </li>
-            <li class="friends__item">
+            <li class="friends__item friends__item-sophia">
               <div class="friends__card-img">
                 <img src="../../assets/images/pets-sophie.png" width="270" height="270" alt="Woody">
               </div>
@@ -95,7 +104,7 @@
                 </a>
               </button>
             </li>
-            <li class="friends__item">
+            <li class="friends__item friends__item-timmy">
               <div class="friends__card-img">
                 <img src="../../assets/images/pets-timmy.png" width="270" height="270" alt="Woody">
               </div>
@@ -106,7 +115,7 @@
                 </a>
               </button>
             </li>
-            <li class="friends__item">
+            <li class="friends__item friends__item-charly">
               <div class="friends__card-img">
                 <img src="../../assets/images/pets-charly.png" width="270" height="270" alt="Woody">
               </div>
@@ -117,7 +126,7 @@
                 </a>
               </button>
             </li>
-            <li class="friends__item">
+            <li class="friends__item friends__item-scarlet">
               <div class="friends__card-img">
                 <img src="../../assets/images/pets-scarlet.png" width="270" height="270" alt="Woody">
               </div>
@@ -128,7 +137,7 @@
                 </a>
               </button>
             </li>
-            <li class="friends__item">
+            <li class="friends__item friends__item-freddie">
               <div class="friends__card-img">
                 <img src="../../assets/images/pets-freddie.png" width="270" height="270" alt="Woody">
               </div>
