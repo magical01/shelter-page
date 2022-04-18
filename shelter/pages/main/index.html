@@ -12,6 +12,7 @@
   <link rel="preload" href="../../assets/fonts/ArialMT.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body class="page__body">
   <header class="header">
@@ -23,22 +24,28 @@
         </a></h1>
         
       </div>
-      <nav class="nav">
+      <nav class="nav" title="Главное меню" data-menu>
         <ul class="nav__list list-reset">
           <li class="nav__item">
-            <a href="#about" class="nav__link nav__link-active">About the shelter</a>
+            <a href="#about" class="nav__link nav__link-active" data-menu-item >About the shelter</a>
           </li>
           <li class="nav__item">
-            <a href="../pets/index.html" class="nav__link">Our pets</a>
+            <a href="../pets/index.html" class="nav__link" data-menu-item >Our pets</a>
           </li>
           <li class="nav__item">
-            <a href="#help" class="nav__link">Help the shelter</a>
+            <a href="#help" class="nav__link" data-menu-item >Help the shelter</a>
           </li>
           <li class="nav__item">
-            <a href="#footer" class="nav__link">Contacts</a>
+            <a href="#footer" class="nav__link" data-menu-item >Contacts</a>
           </li>
         </ul>
+        <!-- <button class="btn-reset burger-close" aria-label="Закрыть меню" data-menu-close></button> -->
       </nav>
+      <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger >
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
     </div>
   </header>
 
@@ -91,8 +98,9 @@
         </button>
         <div class="friends__wrap-title">
           <h3 class="friends__title">
-            &nbsp;&nbsp; &nbsp; Our friends who &nbsp; &nbsp; are looking for a house
+            Our friends who 
           </h3>
+          <h3 class="friends__title-second">are looking for a house</h3>
         </div>
         <ul class="friends__list list-reset">
             <li class="friends__item">
@@ -106,7 +114,7 @@
                   </a>
                 </button>
             </li>
-            <li class="friends__item">
+            <li class="friends__item friends__item-jennifer">
               <div class="friends__card-img">
                 <img src="../../assets/images/jenni.png" width="270" height="270" alt="Jennifer">
               </div>
@@ -117,7 +125,7 @@
                 </a>
               </button>
             </li>
-            <li class="friends__item">
+            <li class="friends__item friends__item-woody">
                 <div class="friends__card-img">
                   <img src="../../assets/images/woody.png" width="270" height="270" alt="Woody">
                 </div>
@@ -197,7 +205,54 @@
               <strong class="help__item-title">Sleeping areas</strong>
             </li>
           </ul>
+          
         </div>
+        <ul class="help__list__mobile list-reset">
+          <li class="help__item">
+              <img src="../../assets/icons/icon-pet-food.svg" width="60" height="60" alt="v">
+            <strong class="help__item-title">Pet food</strong>
+          </li>
+          <li class="help__item">
+              <img src="../../assets/icons/icon-transportation.svg" width="60" height="60" alt="Transportation">
+            <strong class="help__item-title">Transportation</strong>
+          </li>
+          <li class="help__item">
+              <img src="../../assets/icons/icon-toys.svg" width="60" height="60" alt="Toys">
+            <strong class="help__item-title">Toys</strong>
+          </li>
+          <li class="help__item">
+              <img src="../../assets/icons/icon-bowls-and-cups.svg" width="60" height="60" alt="Bowls and cups">
+            <strong class="help__item-title">Bowls and cups</strong>
+          </li>
+          <li class="help__item">
+              <img src="../../assets/icons/icon-shampoos.svg" width="60" height="60" alt="Shampoos">
+            <strong class="help__item-title">Shampoos</strong>
+          </li>
+          <li class="help__item">
+            <div class="help__item-image">
+              <img src="../../assets/icons/icon-vitamins.svg" width="60" height="60" alt="Vitaminss">
+            </div>
+            <strong class="help__item-title">Vitamins</strong>
+          </li>
+          <li class="help__item">
+            <div class="help__item-image">
+              <img src="../../assets/icons/icon-medicines.svg" width="60" height="60" alt="Medicines">
+            </div>
+            <strong class="help__item-title">Medicines</strong>
+          </li>
+          <li class="help__item">
+            <div class="help__item-image">
+              <img src="../../assets/icons/icon-collars-leashes.svg" width="60" height="60" alt="Collars / leshes">
+            </div>
+            <strong class="help__item-title">Collars / leashes</strong>
+          </li>
+          <li class="help__item">
+            <div class="help__item-image">
+              <img src="../../assets/icons/icon-sleeping-area.svg" width="60" height="60" alt="Sleeping areass">
+            </div>
+            <strong class="help__item-title">Sleeping areas</strong>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -253,9 +308,11 @@
         </div>
       </div>
       <div class="footer__location">
-        <h3 class="footer__location__title footer__title">
-          We are waiting for your visit
-        </h3>
+        <div class="footer__location__wrap-title">
+          <h3 class="footer__location__title footer__title">
+            We are waiting for your visit
+          </h3>
+        </div>
         <div class="footer__location__wrap-first">
           <a target="_blank" href="https://www.google.ru/maps/search/1+Central+Street,+Boston+/@42.3681137,-71.0694271,15z/data=!3m1!4b1?hl=ru" class="footer__location__locate">
             <span class="footer__location__icon-locate"></span>
