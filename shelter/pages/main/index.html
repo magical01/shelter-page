@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>aa</title>
+  <title>Shelter</title>
   <link rel="preload" href="../../assets/fonts/GeorgiaBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../../assets/fonts/GeorgiaRegular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../../assets/fonts/GeorgiaItalic.woff2" as="font" type="font/woff2" crossorigin>
@@ -15,6 +15,7 @@
   <script defer src="script.js"></script>
 </head>
 <body class="page__body">
+  <div class="shadow"></div>
   <header class="header">
     <div class="container header__container">
       <div class="logo">
@@ -26,6 +27,12 @@
       </div>
       <nav class="nav" title="Главное меню" data-menu>
         <ul class="nav__list list-reset">
+          <li class="menu__logo">
+            <h1 class="logo__title"><a href="#" class="logo__link">
+              Cozy House
+              <span class="logo__subtitle">Shelter for pets in Boston</span>
+            </a></h1>
+          </li>
           <li class="nav__item">
             <a href="#about" class="nav__link nav__link-active">About the shelter</a>
           </li>
@@ -102,37 +109,31 @@
           <h3 class="friends__title-second">are looking for a house</h3>
         </div>
         <ul class="friends__list list-reset">
-            <li class="friends__item">
+            <li class="friends__item" data-path="katrine">
                 <div class="friends__card-img">
                   <img src="../../assets/images/katrine.png" width="270" height="270" alt="Katrine">
                 </div>
                 <strong class="friends__card-name">Katrine</strong>
                 <button class="btn-reset friends__card-btn">
-                  <a href="#" class="friends__card-btn__link">
                      Learn more
-                  </a>
                 </button>
             </li>
-            <li class="friends__item friends__item-jennifer">
+            <li class="friends__item friends__item-jennifer" data-path="jennifer">
               <div class="friends__card-img">
                 <img src="../../assets/images/jenni.png" width="270" height="270" alt="Jennifer">
               </div>
               <strong class="friends__card-name">Jennifer</strong>
               <button class="btn-reset friends__card-btn">
-                <a href="#" class="friends__card-btn__link">
                   Learn more
-                </a>
               </button>
             </li>
-            <li class="friends__item friends__item-woody">
+            <li class="friends__item friends__item-woody" data-path="woody">
                 <div class="friends__card-img">
                   <img src="../../assets/images/woody.png" width="270" height="270" alt="Woody">
                 </div>
                 <strong class="friends__card-name">Woody</strong>
                 <button class="btn-reset friends__card-btn">
-                  <a href="#" class="friends__card-btn__link">
                     Learn more
-                  </a>
                 </button>
             </li>
         </ul>
@@ -143,6 +144,110 @@
             </a>
             
           </button>
+        </div>
+
+        <div class="modals">
+          <div class="modal-overlay">
+            <div class="modal " data-target="katrine">
+               <div class="modal__katrine modal__content">
+                 <div class="modal__image">
+                   <img src="../../assets/images/modal-jennifer.png" width="500" height="500" alt="Jennifer">
+                 </div>
+                 <div class="modal__wrap">
+                  <h3 class="modal__title">
+                    Jennifer
+                   </h3>
+                  <span class="modal__type">
+                    Dog- Labrador
+                  </span> 
+                  <p class="modal__descr">
+                    Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.
+                  </p>
+                  <ul class="modal__list list-reset">
+                    <li class="modal__item">
+                      <span class="modal__age">Age: 2 mounths</span>
+                    </li>
+                    <li class="modal__item">
+                      <span class="modal__inoculations">Inoculations: none</span>
+                    </li>
+                    <li class="modal__item">
+                      <span class="modal__diseases">Diseases: none</span>
+                    </li>
+                    <li class="modal__item">
+                      <span class="modal__parasites">Parasites: none</span>
+                    </li>
+                  </ul>
+                 </div>
+               </div>
+               <span class="modal-close"></span>
+            </div>
+            <div class="modal " data-target="jennifer">
+              <div class="modal__jennifer modal__content">
+                <div class="modal__image">
+                  <img src="../../assets/images/modal-jennifer.png" width="500" height="500" alt="Jennifer">
+                </div>
+                <div class="modal__wrap">
+                 <h3 class="modal__title">
+                   Jennifer
+                  </h3>
+                 <span class="modal__type">
+                   Dog- Labrador
+                 </span> 
+                 <p class="modal__descr">
+                   Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.
+                 </p>
+                 <ul class="modal__list list-reset">
+                   <li class="modal__item">
+                     <span class="modal__age">Age: 2 mounths</span>
+                   </li>
+                   <li class="modal__item">
+                     <span class="modal__inoculations">Inoculations: none</span>
+                   </li>
+                   <li class="modal__item">
+                     <span class="modal__diseases">Diseases: none</span>
+                   </li>
+                   <li class="modal__item">
+                     <span class="modal__parasites">Parasites: none</span>
+                   </li>
+                 </ul>
+                </div>
+              </div>
+              <span class="modal-close"></span>
+            </div>
+            <div class="modal " data-target="woody">
+              <div class="modal__woody modal__content">
+                <div class="modal__image">
+                  <img src="../../assets/images/modal-jennifer.png" width="500" height="500" alt="Jennifer">
+                </div>
+                <div class="modal__wrap">
+                 <h3 class="modal__title">
+                   Jennifer
+                  </h3>
+                 <span class="modal__type">
+                   Dog- Labrador
+                 </span> 
+                 <p class="modal__descr">
+                   Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.
+                 </p>
+                 <ul class="modal__list list-reset">
+                   <li class="modal__item">
+                     <span class="modal__age">Age: 2 mounths</span>
+                   </li>
+                   <li class="modal__item">
+                     <span class="modal__inoculations">Inoculations: none</span>
+                   </li>
+                   <li class="modal__item">
+                     <span class="modal__diseases">Diseases: none</span>
+                   </li>
+                   <li class="modal__item">
+                     <span class="modal__parasites">Parasites: none</span>
+                   </li>
+                 </ul>
+                </div>
+              </div>
+              <span class="modal-close"></span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -286,11 +391,13 @@
 
   <footer class="footer" id="footer">
     <div class="container footer__container">
-      <img src="../../assets/images/footer-puppy.png" alt="Dog" class="footer__puppy-img" width="300" height="310">
+      
       <div class="footer__contacts">
-        <h3 class="footer__contacts__title footer__title">
-          For questions and suggestions
-        </h3>
+        <div class="footer__contacts__wrap-title">
+          <h3 class="footer__contacts__title footer__title">
+            For questions and suggestions
+          </h3>
+        </div>
         <div class="footer__contacts__wrap-mail">
           
           <a href="mailto:email@shelter.com" class="footer__contacts__mail footer__contacts__link">
@@ -324,6 +431,9 @@
             <a target="_blank" href="https://www.google.ru/maps/search/18+South+Park,+London/@51.4609342,-0.1344336,13z?hl=ru" class="footer__location__locate">18 South Park, London</a>
           </a>
         </div>
+      </div>
+      <div class="footer__image">
+        <img src="../../assets/images/footer-puppy.png" alt="Dog" class="footer__puppy-img" width="300" height="310">
       </div>
     </div>
   </footer>

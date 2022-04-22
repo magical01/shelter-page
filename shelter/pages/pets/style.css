@@ -151,6 +151,20 @@ img {
   border-bottom: 3px solid #F1CDB3;
   color: #545454;
 }
+.menu__logo {
+  display: none;
+}
+.shadow {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: 1s;
+  animation: ani 0.4s forwards;
+  z-index: 2;
+}
 /* friends */
 
 .friends {
@@ -194,7 +208,6 @@ img {
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 30px;
-  margin-bottom: 30px;
   height: 435px;
   border-radius: 9px;
   background-color: #FAFAFA;
@@ -328,18 +341,25 @@ img {
   background-repeat: no-repeat;
 }
 .footer__container {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 .footer__contacts {
   display: inline-block;
-  margin-right: 151px;
+  margin-top: 56px;
+  flex-basis: 33.33%;
 }
 .footer__location {
   display: inline-block;
+  margin-top: 56px;
+  flex-basis: 33.33%;
+
+}
+.footer__image {
+  margin-top: 40px;
 }
 .footer__contacts__title {
-  margin-top: 56px;
-  max-width: 285px;
+  max-width: 78%;
 }
 .footer__title {
   font-weight: 400;
@@ -357,7 +377,6 @@ img {
 .footer__contacts__wrap-phone {
   display: flex;
   align-items: center;
-  margin-bottom: 60px;
 }
 .foooter__contacts__icon-mail {
   display: inline-block;
@@ -386,8 +405,7 @@ img {
   color: #F1CDB3;
 }
 .footer__location__title {
-  max-width: 270px;
-
+  max-width: 75%;
 }
 .footer__location__locate {
   display: flex;
@@ -421,13 +439,19 @@ img {
   background-repeat: no-repeat;
 }
 .footer__puppy-img {
-  position: absolute;
-  top: 40px;
-  right: 40px;
+  display: block;
   height: auto;
   object-fit: contain;
 }
 
+@media (max-width: 1151px) {
+  .footer__contacts__title {
+    max-width: 87%;
+  }
+  .footer__location__title {
+    max-width: 87%;
+  }
+}
 @media (max-width: 1104px) {
   .footer__container {
     padding-top: 30px;
@@ -450,26 +474,93 @@ img {
   .friends__title {
     max-width: 60%;
   }
+  .footer__contacts__title {
+    max-width: 78%;
+  }
+  .footer__location__title {
+    max-width: 80%;
+  }
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .footer__contacts {
+    margin-top: 30px;
+    margin-left: 34px;
+    flex-basis: 40%;
+  }
+  .footer__location {
+    margin-top: 30px;
+    margin-right: 34px;
+    flex-basis: 40%;
+  }
+  .footer__image {
+    margin-top: 65px;
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .footer__image {
+    display: flex;
+    justify-content: center;
+
+  } 
+}
+  @media (max-width: 965px) {
+    .footer__contacts__title {
+      max-width: 88%;
+    }
+    .footer__location__title {
+      max-width: 90%;
+    }
+    
 }
 @media (max-width: 880px) {
   .container {
     padding-right: 30px;
     padding-left: 30px;
   }
-  .footer__contacts {
-    margin-right: 60px;
+  .friends__container {
+    padding-bottom: 76px;
   }
   .friends__title-second {
     margin-bottom: 30px;
   }
   .friends__list {
-    justify-content: space-around;
+    justify-content: center;
+    gap: 40px;
+    row-gap: 30px;
   }
   .friends__wrap-pagination {
-    margin-top: 10px;
+    margin-top: 40px;
   }
+  .footer__contacts__title {
+    max-width: 95%;
+  }
+  .footer__location__title {
+    max-width: 95%;
+  } 
 }
-@media (max-width: 728px) {
+@media (max-width: 796px) {
+  .footer__contacts__title {
+    max-width: 100%;
+  }
+  .footer__location__title {
+    max-width: 100%;
+  } 
+  .footer__contacts {
+    flex-basis: 40%;
+  }
+  .footer__location {
+    flex-basis: 42%;
+    width: 302px;
+    transform: translateX(-5px);
+  }
+  
+}
+@media (max-width: 750px) {
   .stop-scroll {
     overflow: hidden;
   }
@@ -480,6 +571,7 @@ img {
   .burger {
     display: block;
     margin-left: auto;
+    margin-right: 23px;
     position: relative;
     width: 30px;
     height: 22px;
@@ -543,7 +635,7 @@ img {
   }
 
   .nav__list {
-    margin-top: 250px;
+    padding-top: 250px;
     flex-direction: column;
     align-items: center;
   }
@@ -555,12 +647,42 @@ img {
     font-size: 32px;
     line-height: 51px;
   }
-  .footer__puppy-img {
-    margin-top: 40px;
+  .menu__logo--visible {
+    display: block;
+  }
+  .menu__logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+  .logo--hidden {
+    display: none;
+  }
+  .shadow-open {
+    display: block;
+    opacity: 1;
+    
+    
+  }
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__contacts {
+    width: 278px;
+    margin-left: 0;
+  }
+  .footer__location {
+    margin-top: 0;
+    margin-right: 0;
+  }
+  .footer__contacts__wrap-phone {
+    margin-bottom: 40px;
   }
   
 }
 @media (max-width: 580px) {
+  
   .friends__wrap-pagination {
     gap: 10px
   }
@@ -579,6 +701,12 @@ img {
   .friends__item-freddie {
     display: none;
   }
+  .footer__container {
+    padding-top: 0;
+  }
+  .friends__wrap-pagination {
+    margin-top: 42px;
+  }
 }
 @media (max-width: 460px) {
   .friends__container {
@@ -592,7 +720,15 @@ img {
     max-width: 100%;
   }
 }
-@media (max-width: 396px) {
+@media (max-width: 425px) {
+  .burger {
+    margin-right: 43px;
+  }
+  .menu__logo {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+  }
   .container {
     padding-right: 10px;
     padding-left: 10px;
@@ -611,21 +747,45 @@ img {
     text-align: center;
   }
   .footer__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-right: 0;
   }
+  .footer__location__wrap-title {
+    display: flex;
+    justify-content: center;
+  }
   .footer__contacts__wrap-mail {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 41px;
+    margin-bottom: 44px;
   }
   .footer__contacts__wrap-phone {
     margin-bottom: 40px;
   }
+  .footer__location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .footer__location__wrap-first {
     margin-top: 40px;
     margin-bottom: 40px;
+    transform: translateX(5px);
+  }
+  .footer__location__wrap-second {
+    width: 300px;
+    transform: translateX(4px);
+
   }
   .footer__location__title {
     max-width: 80%;
-    transform: translateX(40px);
+    transform: translateX(3px);
+  }
+  .footer__image {
+    margin-top: 40px;
+  }
+  .footer__puppy-img {
+    max-width: 260px;
   }
 }

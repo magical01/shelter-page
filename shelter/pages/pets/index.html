@@ -16,7 +16,9 @@
 
 </head>
 <body class="page__body">
+  
   <header class="header">
+    <div class="shadow"></div>
     <div class="container header__container">
       <div class="logo">
         <h1 class="logo__title"><a href="../main/index.html" class="logo__link">
@@ -27,6 +29,12 @@
       </div>
       <nav class="nav" title="Главное меню" data-menu>
         <ul class="nav__list list-reset ">
+          <li class="menu__logo">
+            <h1 class="logo__title"><a href="#" class="logo__link">
+              Cozy House
+              <span class="logo__subtitle">Shelter for pets in Boston</span>
+            </a></h1>
+          </li>
           <li class="nav__item">
             <a href="../main/index.html" class="nav__link">About the shelter</a>
           </li>
@@ -40,13 +48,14 @@
             <a href="#footer" class="nav__link">Contacts</a>
           </li>
         </ul>
-        
       </nav>
+      
       <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger >
         <span class="burger__line"></span>
         <span class="burger__line"></span>
         <span class="burger__line"></span>
       </button>
+      
     </div>
   </header>
 
@@ -170,18 +179,22 @@
 
   <footer class="footer" id="footer">
     <div class="container footer__container">
-      <img src="../../assets/images/footer-puppy.png" alt="Dog" class="footer__puppy-img" width="300" height="310">
+      
       <div class="footer__contacts">
-        <h3 class="footer__contacts__title footer__title">
-          For questions and suggestions
-        </h3>
+        <div class="footer__contacts__wrap-title">
+          <h3 class="footer__contacts__title footer__title">
+            For questions and suggestions
+          </h3>
+        </div>
         <div class="footer__contacts__wrap-mail">
+          
           <a href="mailto:email@shelter.com" class="footer__contacts__mail footer__contacts__link">
             <span class="foooter__contacts__icon-mail"></span>
             email@shelter.com
           </a>
         </div>
         <div class="footer__contacts__wrap-phone">
+          
           <a href="tel:+136745677554" class="footer__contacts__phone footer__contacts__link">
             <span class="foooter__contacts__icon-phone"></span>
             +13 674 567 75 54
@@ -189,9 +202,11 @@
         </div>
       </div>
       <div class="footer__location">
-        <h3 class="footer__location__title footer__title">
-          We are waiting for your visit
-        </h3>
+        <div class="footer__location__wrap-title">
+          <h3 class="footer__location__title footer__title">
+            We are waiting for your visit
+          </h3>
+        </div>
         <div class="footer__location__wrap-first">
           <a target="_blank" href="https://www.google.ru/maps/search/1+Central+Street,+Boston+/@42.3681137,-71.0694271,15z/data=!3m1!4b1?hl=ru" class="footer__location__locate">
             <span class="footer__location__icon-locate"></span>
@@ -204,6 +219,9 @@
             <a target="_blank" href="https://www.google.ru/maps/search/18+South+Park,+London/@51.4609342,-0.1344336,13z?hl=ru" class="footer__location__locate">18 South Park, London</a>
           </a>
         </div>
+      </div>
+      <div class="footer__image">
+        <img src="../../assets/images/footer-puppy.png" alt="Dog" class="footer__puppy-img" width="300" height="310">
       </div>
     </div>
   </footer>
