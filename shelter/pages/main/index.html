@@ -96,10 +96,10 @@
 
     <section class="friends" id="friends">
       <div class="container friends__container">
-        <button class="friends__pagination btn-reset">
+        <button class="friends__pagination btn-reset" id="btn-right">
           <span class="first"></span>
         </button>
-        <button class="friends__pagination  btn-reset">
+        <button class="friends__pagination  btn-reset" id="btn-left">
           <span class="second"></span>
         </button>
         <div class="friends__wrap-title">
@@ -108,8 +108,13 @@
           </h3>
           <h3 class="friends__title-second">are looking for a house</h3>
         </div>
-        <ul class="friends__list list-reset">
-            <li class="friends__item" data-path="katrine">
+    <div class="friends__wrapper">
+      <div class="carousel-wrapper" id="carousel-wrapper">
+
+        
+        <div class="carousel" id="carousel">
+          <ul class="friends__list friends__list-1 list-reset" id="item-left">
+            <!-- <li class="friends__item" data-path="katrine">
                 <div class="friends__card-img">
                   <img src="../../assets/images/katrine.png" width="270" height="270" alt="Katrine">
                 </div>
@@ -120,7 +125,7 @@
             </li>
             <li class="friends__item friends__item-jennifer" data-path="jennifer">
               <div class="friends__card-img">
-                <img src="../../assets/images/jenni.png" width="270" height="270" alt="Jennifer">
+                <img src="../../assets/images/jennifer.png" width="270" height="270" alt="Jennifer">
               </div>
               <strong class="friends__card-name">Jennifer</strong>
               <button class="btn-reset friends__card-btn">
@@ -135,8 +140,69 @@
                 <button class="btn-reset friends__card-btn">
                     Learn more
                 </button>
+            </li> -->
+          </ul>
+          <ul class="friends__list friends__list-2 list-reset" id="item-active">
+            <!-- <li class="friends__item" data-path="katrine">
+                <div class="friends__card-img">
+                  <img src="../../assets/images/katrine.png" width="270" height="270" alt="Katrine">
+                </div>
+                <strong class="friends__card-name">Katrine</strong>
+                <button class="btn-reset friends__card-btn">
+                     Learn more
+                </button>
             </li>
-        </ul>
+            <li class="friends__item friends__item-jennifer" data-path="jennifer">
+              <div class="friends__card-img">
+                <img src="../../assets/images/jennifer.png" width="270" height="270" alt="Jennifer">
+              </div>
+              <strong class="friends__card-name">Jennifer</strong>
+              <button class="btn-reset friends__card-btn">
+                  Learn more
+              </button>
+            </li>
+            <li class="friends__item friends__item-woody" data-path="woody">
+                <div class="friends__card-img">
+                  <img src="../../assets/images/woody.png" width="270" height="270" alt="Woody">
+                </div>
+                <strong class="friends__card-name">Woody</strong>
+                <button class="btn-reset friends__card-btn">
+                    Learn more
+                </button>
+            </li> -->
+          </ul>
+          <ul class="friends__list friends__list-3 list-reset" id="item-right">
+            <!-- <li class="friends__item" data-path="katrine">
+                <div class="friends__card-img">
+                  <img src="../../assets/images/katrine.png" width="270" height="270" alt="Katrine">
+                </div>
+                <strong class="friends__card-name">Katrine</strong>
+                <button class="btn-reset friends__card-btn">
+                     Learn more
+                </button>
+            </li>
+            <li class="friends__item friends__item-jennifer" data-path="jennifer">
+              <div class="friends__card-img">
+                <img src="../../assets/images/jennifer.png" width="270" height="270" alt="Jennifer">
+              </div>
+              <strong class="friends__card-name">Jennifer</strong>
+              <button class="btn-reset friends__card-btn">
+                  Learn more
+              </button>
+            </li>
+            <li class="friends__item friends__item-woody" data-path="woody">
+                <div class="friends__card-img">
+                  <img src="../../assets/images/woody.png" width="270" height="270" alt="Woody">
+                </div>
+                <strong class="friends__card-name">Woody</strong>
+                <button class="btn-reset friends__card-btn">
+                    Learn more
+                </button>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
         <div class="friends-wrap__btn-rest">
           <button class="friends__btn-rest btn-reset">
             <a href="../pets/index.html" class="friends__link-rest">
@@ -146,9 +212,10 @@
           </button>
         </div>
 
-        <div class="modals">
-          <div class="modal-overlay">
-            <div class="modal " data-target="katrine">
+        <div class="modals"> 
+          <div class="modal-overlay" id="modals">
+
+            <!-- <div class="modal " data-target="katrine" >
                <div class="modal__katrine modal__content">
                  <div class="modal__image">
                    <img src="../../assets/images/modal-jennifer.png" width="500" height="500" alt="Jennifer">
@@ -158,29 +225,30 @@
                     Jennifer
                    </h3>
                   <span class="modal__type">
-                    Dog- Labrador
+                    Dog
                   </span> 
                   <p class="modal__descr">
                     Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.
                   </p>
                   <ul class="modal__list list-reset">
                     <li class="modal__item">
-                      <span class="modal__age">Age: 2 mounths</span>
+                      <span class="modal__age"><strong class="modal-bold">Age:</strong> 2 mounths</span>
                     </li>
                     <li class="modal__item">
-                      <span class="modal__inoculations">Inoculations: none</span>
+                      <span class="modal__inoculations"><strong class="modal-bold">Inoculations:</strong> none</span>
                     </li>
                     <li class="modal__item">
-                      <span class="modal__diseases">Diseases: none</span>
+                      <span class="modal__diseases"><strong class="modal-bold">Diseases:</strong> none</span>
                     </li>
                     <li class="modal__item">
-                      <span class="modal__parasites">Parasites: none</span>
+                      <span class="modal__parasites"><strong class="modal-bold">Parasites:</strong> none</span>
                     </li>
                   </ul>
                  </div>
                </div>
                <span class="modal-close"></span>
             </div>
+
             <div class="modal " data-target="jennifer">
               <div class="modal__jennifer modal__content">
                 <div class="modal__image">
@@ -188,32 +256,30 @@
                 </div>
                 <div class="modal__wrap">
                  <h3 class="modal__title">
-                   Jennifer
                   </h3>
                  <span class="modal__type">
-                   Dog- Labrador
                  </span> 
                  <p class="modal__descr">
-                   Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.
                  </p>
                  <ul class="modal__list list-reset">
                    <li class="modal__item">
-                     <span class="modal__age">Age: 2 mounths</span>
+                     <span class="modal__age"><strong class="modal__age-bold">Age:</strong> 2 mounths</span>
                    </li>
                    <li class="modal__item">
-                     <span class="modal__inoculations">Inoculations: none</span>
+                     <span class="modal__inoculations"><strong class="modal__inoculations-bold">Inoculations:</strong> none</span>
                    </li>
                    <li class="modal__item">
-                     <span class="modal__diseases">Diseases: none</span>
+                     <span class="modal__diseases"><strong class="modal__diseases-bold">Diseases:</strong> none</span>
                    </li>
                    <li class="modal__item">
-                     <span class="modal__parasites">Parasites: none</span>
+                     <span class="modal__parasites"><strong class="modal__parasites-bold">Parasites:</strong> none</span>
                    </li>
                  </ul>
                 </div>
               </div>
               <span class="modal-close"></span>
             </div>
+
             <div class="modal " data-target="woody">
               <div class="modal__woody modal__content">
                 <div class="modal__image">
@@ -221,32 +287,30 @@
                 </div>
                 <div class="modal__wrap">
                  <h3 class="modal__title">
-                   Jennifer
                   </h3>
                  <span class="modal__type">
-                   Dog- Labrador
                  </span> 
                  <p class="modal__descr">
-                   Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.
                  </p>
                  <ul class="modal__list list-reset">
                    <li class="modal__item">
-                     <span class="modal__age">Age: 2 mounths</span>
+                     <span class="modal__age"><strong class="modal__age-bold">Age:</strong> 2 mounths</span>
                    </li>
                    <li class="modal__item">
-                     <span class="modal__inoculations">Inoculations: none</span>
+                     <span class="modal__inoculations"><strong class="modal__inoculations-bold">Inoculations:</strong> none</span>
                    </li>
                    <li class="modal__item">
-                     <span class="modal__diseases">Diseases: none</span>
+                     <span class="modal__diseases"><strong class="modal__diseases-bold">Diseases:</strong> none</span>
                    </li>
                    <li class="modal__item">
-                     <span class="modal__parasites">Parasites: none</span>
+                     <span class="modal__parasites"><strong class="modal__parasites-bold">Parasites:</strong> none</span>
                    </li>
                  </ul>
                 </div>
               </div>
               <span class="modal-close"></span>
-            </div>
+            </div> -->
+            
           </div>
         </div>
       </div>
