@@ -46,6 +46,18 @@ menuItems.forEach(el => {
 
   });
 });
+shadow.addEventListener('click', (event) => {
+  
+  if (event.target.closest('.nav--visible') === null) {
+    body?.classList.remove('stop-scroll');
+    burger?.classList.remove('burger--active');
+    menu?.classList.remove('nav--visible');   
+    menuLogo?.classList.remove('menu__logo--visible');
+    logo?.classList.remove('logo--hidden');
+    shadow?.classList.remove('shadow-open');
+    
+  }
+})
 
 
 //const cards = document?.querySelectorAll('.friends__item');

@@ -471,6 +471,13 @@ img {
   background-repeat: no-repeat;
   background-position: center;
 }
+.close-hover {
+  background: #FDDCC4;
+  background-image: url('../../assets/icons/close.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.3s ease-in-out;
+}
 
 .modal__list {
   display: flex;
@@ -1525,3 +1532,4 @@ img {
 
 } */
 
+/* friends__item:hover .friends__card-btn */
