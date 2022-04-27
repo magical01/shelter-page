@@ -1,3 +1,4 @@
+// burger ===============================================
 const burger = document?.querySelector('[data-burger]');
 const menu = document?.querySelector('[data-menu]');
 const menuItems = menu?.querySelectorAll('a');
@@ -13,7 +14,6 @@ burger?.addEventListener('click', () => {
   menuLogo?.classList.toggle('menu__logo--visible');
   logo?.classList.toggle('logo--hidden');
   shadow?.classList.toggle('shadow-open');
-
 });
 
 menuItems.forEach(el => {
@@ -24,13 +24,10 @@ menuItems.forEach(el => {
     menuLogo?.classList.remove('menu__logo--visible');
     logo?.classList.remove('logo--hidden');
     shadow?.classList.remove('shadow-open');
-
-
   });
 });
 
 shadow.addEventListener('click', (event) => {
-  
   if (event.target.closest('.nav--visible') === null) {
     body?.classList.remove('stop-scroll');
     burger?.classList.remove('burger--active');
@@ -38,81 +35,16 @@ shadow.addEventListener('click', (event) => {
     menuLogo?.classList.remove('menu__logo--visible');
     logo?.classList.remove('logo--hidden');
     shadow?.classList.remove('shadow-open');
-    
   }
 })
 
+// MODAL ===================
 
-// const cards = document?.querySelectorAll('.friends__item');
-// const modalOverlay = document?.querySelector('.modal-overlay ');
-// const modals = document?.querySelectorAll('.modal');
-// const btnClose = document?.querySelectorAll('.modal-close');
-
-// cards.forEach((el) => {
-// 	el.addEventListener('click', (e) => {
-// 		let path = e.currentTarget.getAttribute('data-path');
-// 		modals.forEach((el) => {
-//       el.classList.remove('modal--visible');
-// 		});
-    
-// 		document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
-// 		modalOverlay?.classList.add('modal-overlay--visible');
-//     body?.classList.add('stop-scroll')
-// 	});
-// });
-
-// modalOverlay.addEventListener('click', (e) => {
-  
-// 	if (e.target == modalOverlay) {
-// 		modalOverlay?.classList.remove('modal-overlay--visible');
-// 		modals?.forEach((el) => {
-//       el.classList.remove('modal--visible');
-      
-// 		});
-//     body?.classList.remove('stop-scroll')
-// 	}
-// });
-
-// btnClose.forEach(el => {
-//   el.addEventListener('click', () => {
-//     modalOverlay?.classList.remove('modal-overlay--visible');
-//     body?.classList.remove('stop-scroll')
-//   });
-// })
-
-// modalOverlay.addEventListener('click', (event) => {
-//   if (event.target.closest('.modal__content') === null) {
-//     modalOverlay?.classList.remove('modal-overlay--visible');
-//     body?.classList.remove('stop-scroll')
-//   }
-// })
-// ==========================================================================
-
-
-//const cards = document?.querySelectorAll('.friends__item');
 const modalOverlay = document?.querySelector('.modal-overlay ');
-//const modals = document?.querySelectorAll('.modal');
 const btnClose = document?.querySelectorAll('.modal-close');
 
-// cards.forEach((el) => {
-// 	el.addEventListener('click', (e) => {
-// 		let path = e.currentTarget.getAttribute('data-path');
-// 		modals.forEach((el) => {
-//       el.classList.remove('modal--visible');
-// 		});
-    
-// 		document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
-// 		modalOverlay?.classList.add('modal-overlay--visible');
-//     body?.classList.add('stop-scroll')
-// 	});
-// });
-
 modalOverlay.addEventListener('click', (e) => {
-  
-  //let modals = document?.querySelectorAll('.modal');
-
   let modals = document.getElementById('modals').querySelectorAll('.modal--visible');
-
 	if (e.target == modalOverlay) {
 		modalOverlay.classList.remove('modal-overlay--visible');
 		modals.forEach((el) => {
@@ -120,10 +52,7 @@ modalOverlay.addEventListener('click', (e) => {
 		});
     body.classList.remove('stop-scroll')
 	}
-
 });
-
-
 
 btnClose.forEach(el => {
   el.addEventListener('click', () => {
@@ -133,11 +62,9 @@ btnClose.forEach(el => {
 })
 
 modalOverlay.addEventListener('click', (event) => {
-  
   if (event.target.closest('.modal__content') === null) {
     modalOverlay?.classList.remove('modal-overlay--visible');
     body?.classList.remove('stop-scroll')
-    
   }
 })
 
@@ -232,20 +159,15 @@ const pets = [
     "parasites": ["lice", "fleas"]
   }
 ];
-
 const modalPrefix = 'modal__item-';
 const liElementPrefix = 'friends__item-';
 
-
 const addModal = function(id, where, data) {
-
   let elementId = modalPrefix + id;
-
   // default value
   if(typeof(where) == 'undefined') {
     where = document.getElementById('modals');
   }
-
   // modal template
   let appendText = '';
   appendText += '<div id="'+elementId+'" class="modal">';
@@ -283,59 +205,18 @@ const addModal = function(id, where, data) {
   appendText += '  <span class="modal-close"></span>';
   appendText += '</div>';
   appendText += '';
-
   // append
   where.innerHTML += appendText;
-
   // event
   setTimeout(function () {
     document.getElementById(elementId).addEventListener('click', function (event) {
-      
       if (event.target.closest('.modal__content') === null) {
         closeModal(elementId);
       } 
-
     });
   }, 10);
 
 }
-
-
-// const addLiElement = function(id, where, data) {
-
-//   let elementId = modalPrefix + id;
-//   let liElementId = liElementPrefix + id;
-
-//   if (typeof where == 'undefined') {
-//     where = document.querySelector('.friends__list')
-//   }
-//   // template
-//   let appendText = '';
-//   appendText += '  <li id="'+liElementId+'" class="friends__item">';
-//   appendText += '    <div class="friends__card-img">';
-//   appendText += '      <img src="'+data.img+'" width="270" height="270" alt="'+data.name+'">';
-//   appendText += '    </div>';
-//   appendText += '    <strong class="friends__card-name">'+data.name+'</strong>';
-//   appendText += '    <button class="btn-reset friends__card-btn">';
-//   appendText += '      <a href="#" class="friends__card-btn__link">';
-//   appendText += '        Learn more';
-//   appendText += '      </a>';
-//   appendText += '    </button>';
-//   appendText += '  </li>';
-
-//   // append
-//   where.innerHTML += appendText;
-
-//   // event
-//   setTimeout(function() {
-//     document.getElementById(liElementId).addEventListener('click', function () {
-//       openModal(elementId);
-//     });
-//   }, 10);
-
-// }
-
-
 const pasteModalsFromData = function (data, modalsContainer, liContainer) {
   // default values
   if(typeof(data) == 'undefined') data = pets;
@@ -348,9 +229,6 @@ const pasteModalsFromData = function (data, modalsContainer, liContainer) {
   }
 
 }
-
-// window.addEventListener("DOMContentLoaded", pasteModalsFromData)
-
 
 const openModal = function(id) {
   let el = document.getElementById(id);
@@ -373,29 +251,21 @@ document.addEventListener('DOMContentLoaded', () => {
   initCarousel();
 });
 
+// carousel ========================
+
 const BTN_LEFT = document.querySelector("#btn-left");
 const BTN_RIGHT = document.querySelector("#btn-right");
 const CAROUSEL = document.querySelector("#carousel");
 const ITEM_LEFT = document.querySelector("#item-left");
 const ITEM_RIGHT = document.querySelector("#item-right");
-//const MODAL_ID_PREFIX = 'modal_id_';
 const MODAL_ID_PREFIX = modalPrefix;
-const CARD_ID_PREFIX = 'card_id_';
-// const 
+const CARD_ID_PREFIX = 'card-';
 
 const getRandomNumber = function(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-// const getRandomId = function(len = 8) {
-//   let id = '';
-//   for(let i = 0; i < len; i++) {
-//     id += String(getRandomNumber(0, 9));
-//   }
-//   return id;
-// }
-
-var carouselCards = [];
+let carouselCards = [];
 
 const generateThreeCards = function(usedCards = carouselCards, selection = pets) {
   let newCards = [];
@@ -434,7 +304,6 @@ const createCardTemplate = function (data, id, modalId) {
        Learn more
   </button>
   </li>`;
-
   return html;
 }
 
@@ -466,21 +335,12 @@ const addListenerToCards = function(selection = carouselCards) {
     addListenerToCard(selection[i]);
   }
 }
-
-// const createCardTemplate = () => {
-//   const card = document.createElement("li");
-//   card.classList.add("friends__item");
-//   return card;
-// }
-
 const moveLeft = () => {
   // generate new cards and save
   carouselCards = generateThreeCards();
-
   // generate side cards template and paste to DOM
   ITEM_LEFT.innerHTML = createItemTemplate(carouselCards);
   ITEM_RIGHT.innerHTML = createItemTemplate(carouselCards);
-
   // run animation
   CAROUSEL.classList.add("transition-left");
   BTN_LEFT.removeEventListener("click", moveLeft);
@@ -490,11 +350,9 @@ const moveLeft = () => {
 const moveRight = () => {
   // generate new cards and save
   carouselCards = generateThreeCards();
-
   // generate side cards template and paste to DOM
   ITEM_LEFT.innerHTML = createItemTemplate(carouselCards);
   ITEM_RIGHT.innerHTML = createItemTemplate(carouselCards);
-
   // run animation
   CAROUSEL.classList.add("transition-right");
   BTN_LEFT.removeEventListener("click", moveLeft);
@@ -505,7 +363,6 @@ BTN_LEFT.addEventListener("click", moveLeft);
 BTN_RIGHT.addEventListener("click", moveRight);
 
 CAROUSEL.addEventListener("animationend", (animationEvent) => {
-
   // set initial position
   let changedItem;
   if (animationEvent.animationName === "move-left") {
@@ -517,28 +374,8 @@ CAROUSEL.addEventListener("animationend", (animationEvent) => {
     changedItem = ITEM_RIGHT;
     document.querySelector("#item-active").innerHTML = ITEM_RIGHT.innerHTML;
   }
-
   // add event listeners to cards of current active item
-  // !!!
   addListenerToCards();
-
-  // generate new cards
-  // let newCards = generateThreeCards();
-  // let itemHTML = createItemTemplate(newCards);
-  // ITEM_LEFT.innerHTML = itemHTML;
-  // ITEM_RIGHT.innerHTML = itemHTML;
-
-
-
-  //document.querySelector("#item-active").innerHTML = ITEM_RIGHT.innerHTML;
-  
-  // changedItem.innerHTML = "";
-  // for (let i = 0; i < 3; i++) {
-  //   const card = createCardTemplate();
-  //   card.innerText = Math.floor(Math.random() * 8);
-  //   changedItem.appendChild(card);
-  // }
-  
   BTN_LEFT.addEventListener("click", moveLeft);
   BTN_RIGHT.addEventListener("click", moveRight);
 })

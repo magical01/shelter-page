@@ -1,21 +1,4 @@
-// const burger = document?.querySelector('[data-burger]');
-// const menu = document?.querySelector('[data-menu]');
-// const menuItems = menu?.querySelectorAll('a');
-// const body = document.body;
-
-// burger?.addEventListener('click', () => {
-//   body?.classList.toggle('stop-scroll');
-//   burger?.classList.toggle('burger--active');
-//   menu?.classList.toggle('nav--visible');
-// });
-
-// menuItems.forEach(el => {
-//   el.addEventListener('click', () => {
-//     body?.classList.remove('stop-scroll');
-//     burger?.classList.remove('burger--active');
-//     menu?.classList.remove('nav--visible');   
-//   });
-// });
+// burger =============
 const burger = document?.querySelector('[data-burger]');
 const menu = document?.querySelector('[data-menu]');
 const menuItems = menu?.querySelectorAll('a');
@@ -31,7 +14,6 @@ burger?.addEventListener('click', () => {
   menuLogo?.classList.toggle('menu__logo--visible');
   logo?.classList.toggle('logo--hidden');
   shadow?.classList.toggle('shadow-open');
-
 });
 
 menuItems.forEach(el => {
@@ -42,8 +24,6 @@ menuItems.forEach(el => {
     menuLogo?.classList.remove('menu__logo--visible');
     logo?.classList.remove('logo--hidden');
     shadow?.classList.remove('shadow-open');
-
-
   });
 });
 shadow.addEventListener('click', (event) => {
@@ -55,35 +35,14 @@ shadow.addEventListener('click', (event) => {
     menuLogo?.classList.remove('menu__logo--visible');
     logo?.classList.remove('logo--hidden');
     shadow?.classList.remove('shadow-open');
-    
   }
 })
-
-
-//const cards = document?.querySelectorAll('.friends__item');
+// modal ==============================================================
 const modalOverlay = document?.querySelector('.modal-overlay ');
-//const modals = document?.querySelectorAll('.modal');
 const btnClose = document?.querySelectorAll('.modal-close');
 
-// cards.forEach((el) => {
-// 	el.addEventListener('click', (e) => {
-// 		let path = e.currentTarget.getAttribute('data-path');
-// 		modals.forEach((el) => {
-//       el.classList.remove('modal--visible');
-// 		});
-    
-// 		document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
-// 		modalOverlay?.classList.add('modal-overlay--visible');
-//     body?.classList.add('stop-scroll')
-// 	});
-// });
-
 modalOverlay.addEventListener('click', (e) => {
-  
-  //let modals = document?.querySelectorAll('.modal');
-
   let modals = document.getElementById('modals').querySelectorAll('.modal--visible');
-
 	if (e.target == modalOverlay) {
 		modalOverlay.classList.remove('modal-overlay--visible');
 		modals.forEach((el) => {
@@ -91,7 +50,6 @@ modalOverlay.addEventListener('click', (e) => {
 		});
     body.classList.remove('stop-scroll')
 	}
-
 });
 
 btnClose.forEach(el => {
@@ -102,15 +60,13 @@ btnClose.forEach(el => {
 })
 
 modalOverlay.addEventListener('click', (event) => {
-  
   if (event.target.closest('.modal__content') === null) {
     modalOverlay?.classList.remove('modal-overlay--visible');
     body?.classList.remove('stop-scroll')
-    
   }
 })
 
-// =============
+
 
 const pets = [
   {
@@ -190,8 +146,6 @@ const pets = [
     "diseases": ["none"],
     "parasites": ["none"]
   },
-
-  
   {
     "name": "Freddie",
     "img": "../../assets/images/freddie.png",
@@ -206,20 +160,15 @@ const pets = [
   
 ];
 
-
 const modalPrefix = 'modal__item-';
 const liElementPrefix = 'friends__item-';
 
-
 const addModal = function(id, where, data) {
-
   let elementId = modalPrefix + id;
-
   // default value
   if(typeof(where) == 'undefined') {
     where = document.getElementById('modals');
   }
-
   // modal template
   let appendText = '';
   appendText += '<div id="'+elementId+'" class="modal">';
@@ -257,18 +206,14 @@ const addModal = function(id, where, data) {
   appendText += '  <span class="modal-close"></span>';
   appendText += '</div>';
   appendText += '';
-
   // append
   where.innerHTML += appendText;
-
   // event
   setTimeout(function () {
     document.getElementById(elementId).addEventListener('click', function (event) {
-      
       if (event.target.closest('.modal__content') === null) {
         closeModal(elementId);
       } 
-
     });
   }, 10);
 
@@ -276,15 +221,12 @@ const addModal = function(id, where, data) {
 
 
 const addLiElement = function(id, where, data) {
-
   let elementId = modalPrefix + id;
   let liElementId = liElementPrefix + id;
-
   // default value
   if (typeof (where) == 'undefined') {
     where = document.getElementById('friends__list');
   }
-
   // template
   let appendText = '';
   appendText += '  <li id="'+liElementId+'" class="friends__item">';
@@ -298,10 +240,8 @@ const addLiElement = function(id, where, data) {
   appendText += '      </a>';
   appendText += '    </button>';
   appendText += '  </li>';
-
   // append
   where.innerHTML += appendText;
-
   // event
   setTimeout(function() {
     document.getElementById(liElementId).addEventListener('click', function () {
@@ -313,14 +253,11 @@ const addLiElement = function(id, where, data) {
 
 
 const pasteModalsFromData = function (data, modalsContainer, liContainer) {
-
   // default values
   if(typeof(data) == 'undefined') data = pets;
-
   // read data
   for(let i = 0; i < data.length; i++) {
     let item = data[i];
-
     // add modals and buttons
     addModal(i, modalsContainer, item);
     addLiElement(i, liContainer, item);
@@ -328,31 +265,19 @@ const pasteModalsFromData = function (data, modalsContainer, liContainer) {
 
 }
 
-// window.addEventListener("DOMContentLoaded", pasteModalsFromData)
-
-
 const openModal = function(id) {
-
   let el = document.getElementById(id);
-
   el.classList.add('modal--visible');
-
   modalOverlay?.classList.add('modal-overlay--visible');
   body?.classList.add('stop-scroll');
-
 }
 
 const closeModal = function(id) {
-
   let el = document.getElementById(id);
-
   el.classList.remove('modal--visible');
-
   modalOverlay?.classList.remove('modal-overlay--visible');
   body?.classList.remove('stop-scroll');
-
 }
-
 
 window.onload = function() {
   pasteModalsFromData();
