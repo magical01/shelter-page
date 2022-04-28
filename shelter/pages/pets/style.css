@@ -379,13 +379,13 @@ img {
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 .modal--visible {
-  display: block;
+  display: flex;
 
 }
 
 .modal-close {
   position: absolute;
-  top: 0;
+  top: 15px;
   right: 0;
   display: inline-block;
   width: 52px;
@@ -395,14 +395,10 @@ img {
   background-image: url('../../assets/icons/close.svg');
   background-repeat: no-repeat;
   background-position: center;
+  background-color: transparent;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
-}
-.modal-close:hover {
-  background: #FDDCC4;
-  background-image: url('../../assets/icons/close.svg');
-  background-repeat: no-repeat;
-  background-position: center;
+  z-index: 2000;
 }
 
 .modal__list {
@@ -732,8 +728,15 @@ img {
   
 }
 @media (max-width: 766px) {
+  .modal {
+    width: 315px;
+  }
   .modal__image {
     display: none;
+  }
+  .modal__content {
+    align-self: center;
+    width: 240px;
   }
   .modal__wrap {
 
@@ -746,6 +749,9 @@ img {
   }
   .modal__list {
     align-self: flex-start
+  }
+  .modal-close {
+    top: -2px;
   }
 }
 @media (max-width: 750px) {
@@ -876,12 +882,12 @@ img {
   }
   
 }
-@media (max-width: 620px) {
+/* @media (max-width: 620px) {
   .modal-close {
     top: -5px;
     right: -5px;
   }
-}
+} */
 @media (max-width: 580px) {
   
   .friends__wrap-pagination {
@@ -1007,4 +1013,18 @@ img {
   .footer__puppy-img {
     max-width: 260px;
   }
+}
+.modal-close:hover {
+  background-color: #FDDCC4;
+
+}
+.modal-overlay:hover .modal-close {
+  background-color: #FDDCC4;
+}
+
+.modal:hover .modal-close {
+  background-color: transparent;
+}
+.modal:hover .modal-close:hover {
+  background-color: #FDDCC4;
 }
