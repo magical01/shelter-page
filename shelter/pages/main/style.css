@@ -1534,7 +1534,6 @@ img {
     /* margin-right: 130px; */
     /* gap: 40px; */
   }
-  
 }
 
 @media (max-width: 616px) {
@@ -1594,4 +1593,17 @@ img {
 }
 .modal:hover .modal-close:hover {
   background-color: #FDDCC4;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #F1CDB3;
 }

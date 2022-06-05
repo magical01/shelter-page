@@ -266,6 +266,9 @@ img {
   border-radius: 100px;
   transition: 0.2s ease-in-out;
 }
+.btn-inactive.friends__pagination__next:hover  {
+  background: transparent;
+}
 .friends__pagination__next:hover {
   background: #FDDCC4;
 }
@@ -572,6 +575,13 @@ img {
   overflow: hidden;
 }
 
+@media (max-width: 1280px) {
+  .friends__list {
+    margin: 0 auto;
+    width: 580px;
+  }
+}
+
 @media (max-width: 1151px) {
   .footer__contacts__title {
     max-width: 87%;
@@ -752,6 +762,9 @@ img {
   }
   .modal-close {
     top: -2px;
+  }
+  .friends__list {
+    width: 270px;
   }
 }
 @media (max-width: 750px) {
@@ -1027,4 +1040,17 @@ img {
 }
 .modal:hover .modal-close:hover {
   background-color: #FDDCC4;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #F1CDB3;
 }

@@ -251,6 +251,117 @@ const addLiElement = function(id, where, data) {
 
 }
 
+let paginationPets = [];
+let paginationPosition = 0;
+let countCards = 8;
+
+const btnDoublePrev = document.querySelector('.double-prev');
+const btnPrev = document.querySelector('.one-prev');
+const btnNext = document.querySelector('.one-next');
+const btnDoubleNext = document.querySelector('.double-next');
+
+const initPagination = function() {
+  let count = 48;
+  let set;
+  function createSet() {
+    set = [];
+    for(let i = 0; i < pets.length; i++) set.push(i);
+  }
+  createSet();
+  while(paginationPets.length < count) {
+    if(set.length === 0) createSet();
+    let ind = Math.floor(Math.random() * set.length);
+    let pet = set[ind];
+    paginationPets.push(pets[pet]);
+    set.splice(ind, 1);
+  }
+  btnDoublePrev.addEventListener('click', () => { movePagination('doublePrev'); });
+  btnPrev.addEventListener('click', () => { movePagination('onePrev'); });
+  btnNext.addEventListener('click', () => { movePagination('oneNext'); });
+  btnDoubleNext.addEventListener('click', () => { movePagination('doubleNext'); });
+}
+
+const renderPagination = function() {
+
+  const btnNum = document.querySelector('.btn-num');
+  const container = document.querySelector('.friends__list');
+  
+  let pages = Math.ceil(paginationPets.length / countCards);
+  let page = Math.floor(paginationPosition / countCards) + 1;
+
+  btnNum.innerHTML = page;
+  // let content = '';
+
+  container.innerHTML = '';
+  for(let i = 0; i < countCards; i++) {
+    let pos = paginationPosition + i;
+    // content = `
+    
+    // `;
+    //addLiElement('li-card-id' + i, container, paginationPets[pos]);
+    addLiElement(i, container, paginationPets[pos]);
+  }
+  
+}
+
+const movePagination = function(button) {
+  let endLimit = paginationPets.length - countCards;
+
+  // define counts of cards that can contain in container
+  if (window.innerWidth >= 1280) {
+    countCards = 8;
+  } 
+  else if (window.innerWidth > 768) {
+    countCards = 6;
+  }
+  else {
+    countCards = 3;
+  }
+
+  console.log('countCards', countCards);
+
+  // define current page
+  switch (button) {
+    case 'onePrev':
+      paginationPosition -= countCards;
+    break;
+    case 'doublePrev':
+      paginationPosition = 0;
+    break;
+    case 'oneNext':
+    paginationPosition += countCards;
+    break;
+    case 'doubleNext':
+      paginationPosition = endLimit;
+    break;
+  }
+
+  // current page value limiter
+  if(paginationPosition < 0) paginationPosition = 0;
+  if(paginationPosition > endLimit) paginationPosition = endLimit;
+
+  // change style of pagination buttons
+  if (paginationPosition === 0) {
+    btnDoublePrev.classList.add('btn-inactive');
+    btnPrev.classList.add('btn-inactive');
+    btnNext.classList.remove('btn-inactive');
+    btnDoubleNext.classList.remove('btn-inactive');
+  }
+  else if (paginationPosition === endLimit) {
+    btnDoublePrev.classList.remove('btn-inactive');
+    btnPrev.classList.remove('btn-inactive');
+    btnNext.classList.add('btn-inactive');
+    btnDoubleNext.classList.add('btn-inactive');
+  }
+  else {
+    btnDoublePrev.classList.remove('btn-inactive');
+    btnPrev.classList.remove('btn-inactive');
+    btnNext.classList.remove('btn-inactive');
+    btnDoubleNext.classList.remove('btn-inactive');
+  }
+
+  renderPagination();
+}
 
 const pasteModalsFromData = function (data, modalsContainer, liContainer) {
   // default values
@@ -279,6 +390,12 @@ const closeModal = function(id) {
   body?.classList.remove('stop-scroll');
 }
 
-window.onload = function() {
+// window.onload = function() {
+  
+// }
+
+document.addEventListener('DOMContentLoaded', () => {
   pasteModalsFromData();
-}
+  initPagination();
+  movePagination('doublePrev');
+})
